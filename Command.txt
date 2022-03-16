@@ -1,0 +1,61 @@
+\c
+
+show databases;
+
+create database hasan;
+
+use hasan;
+
+show tables;
+
+create table hasan_t(Id int(20),Name varchar(20),CGPA float(20));
+
+insert into hasan_t values(01,'Rahim',05,'Dhaka',3.90);
+
+describe hasan_t;
+
+select * from hasan_t;
+
+select * hasan_t where District='Dhaka';
+
+drop database hasan;
+
+update hasan_t set CGPA=3.90 where Roll=20;
+
+delete from hasan_t where Roll=20;
+
+alter table hasan_t add column District varchar(20);
+
+alter table hasan_t drop District;
+
+alter table hasan_t change Grade varchar(3);
+
+
+select rool,name from hasan_t order by Roll;
+
+select roll,name, from hasan_t order by Roll desc;
+
+select * from hasan_t order by CGPA desc limit3;
+
+load data infile 'Desktop\Book1.csv' replace into table practice_t2 fields terminated by ',' lines terminated by '\n' (Name,Country,CGPA);
+
+select avg (CGPA) from hasan_t;
+
+select sum (mark) from hasan_t where Country='Bangladesh';
+
+select min\max (cgpa) from hasan_t where Country='Bangladesh';
+
+select count (Roll) from hasan_t where cgpa>3.5;
+
+select count (distinct country) from hasan_t;
+
+select name from hasan_t where Country like'%desh';
+
+
+
+
+ 
+
+
+
+
